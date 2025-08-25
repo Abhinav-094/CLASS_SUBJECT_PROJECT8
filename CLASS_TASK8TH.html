@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script>
+           $(document).ready(function()
+           {
+               $("#dropdown").change(function()
+            {
+               var DROPDOWN = $("#dropdown").val()
+               if (DROPDOWN == "10")
+               {
+                  $("#class10").css("display","block");
+                   $("#class11").css("display","none");
+                    $("#class12").css("display","none");
+               }
+               else if (DROPDOWN == "11")
+               {
+                  $("#class10").css("display","none");
+                   $("#class11").css("display","block");
+                    $("#class12").css("display","none");
+               }
+               else if (DROPDOWN == "12")
+               {
+                  $("#class10").css("display","none");
+                   $("#class11").css("display","none");
+                    $("#class12").css("display","block");
+               }
+               else 
+               {
+                  $("#class10").css("display","none");
+                   $("#class11").css("display","none");
+                    $("#class12").css("display","none");
+               }
+               
+            })
+           });
+     </script>
+     <style>
+        #class10
+        {
+            display: none;
+        }
+        #class11
+        {
+            display: none;
+        }
+        #class12
+        {
+            display: none;
+        }
+     </style>
+</head>
+<body>
+    <select id="dropdown">
+        <option value="">SELECT CLASS</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+        <option value="11">11</option>
+        <option value="12">12</option>
+    </select><br><br>
+    <div id="class10">   
+        <input  type="radio" name="ten"  value="REGULAR">REGULAR
+        <input  type="radio" name="ten"  value="PRIVATE">PRIVATE
+    </div>
+    
+    <div id="class11">
+        <input type="radio" name="branch" value="maths">MATHS
+        <input type="radio" name="branch" value="maths">ARTS
+        <input type="radio" name="branch" value="maths">BIO
+    </div>
+
+    <div id="class12">
+        <input  type="radio" name="ten"  value="REGULAR">REGULAR
+        <input  type="radio" name="ten"  value="PRIVATE">PRIVATE<br><br>
+        <input type="radio" name="branch" value="maths">MATHS
+        <input type="radio" name="branch" value="maths">ARTS
+        <input type="radio" name="branch" value="maths">BIO
+    </div>
+
+</body>
+</html>
